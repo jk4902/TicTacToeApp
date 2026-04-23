@@ -1,1 +1,3 @@
 # TicTacToeApp
+
+TicTacToe App starts with displaying an empty game board, progresses to deciding the first player using a toss, and accepts user slot input (1–9). It then converts the slot number into board indices (row and column), validates the user move, and updates the board accordingly. The application continues with game logic such as checking win conditions, switching turns between players, and handling game outcomes (win, lose, draw), finally providing an interactive console-based Tic-Tac-Toe experience.
