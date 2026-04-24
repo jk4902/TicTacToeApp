@@ -8,6 +8,7 @@
 # Other File Exclusions
 .DS_Store
 *.iml
+.vsc
 
 # Build Folders Exclusion
 .idea/
