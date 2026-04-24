@@ -1,17 +1,32 @@
 public class TicTacToe {
 
+    static char[][] board = {
+        {'-', '-', '-'},
+        {'-', '-', '-'},
+        {'-', '-', '-'}
+    };
+
     public static void main(String[] args) {
-        int slot = 7;
-
-        System.out.println("Row: " + getRowFromSlot(slot));
-        System.out.println("Column: " + getColFromSlot(slot));
+        System.out.println(isValidMove(1, 1)); // Test case
     }
 
-    static int getRowFromSlot(int slot) {
-        return (slot - 1) / 3;
-    }
+    /**
+     * Checks if the given row and column are within bounds
+     * and if the target cell is empty.
+     */
+    static boolean isValidMove(int row, int col) {
 
-    static int getColFromSlot(int slot) {
-        return (slot - 1) % 3;
+        // Step 1: Check boundaries (0 to 2)
+        if (row < 0 || row > 2 || col < 0 || col > 2) {
+            return false;
+        }
+
+        // Step 2: Check if cell is empty
+        if (board[row][col] != '-') {
+            return false;
+        }
+
+        // Step 3: Valid move
+        return true;
     }
 }
